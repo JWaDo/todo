@@ -1,0 +1,9 @@
+.sideLinks {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.main {
+    min-height: 100vh;
+}
