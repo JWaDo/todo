@@ -1,30 +1,17 @@
-import React, { useEffect } from 'react';
-import { Router, Switch, Route, Redirect } from 'react-router-dom';
-
-import NavBar from './components/Global/NavBar/NavBar';
+import React from 'react';
+import { Router, Switch } from 'react-router-dom';
 
 import history from './configs/history';
 import routes from './routes/index';
 import { generateRoutes } from './routes/index';
 
 import './index.css'
-import useTranslation from './translation/useTranslation';
 
 function App() {
-
-  const trl = useTranslation();
-
-  useEffect(() => {
-    if(trl.getLang() === null) {
-      const language = navigator.language.split('-')[0];
-      trl.toggleLanguage(language);
-    }
-  }, []);
 
   return (
     <div className="main">
       <Router history={history}>
-        <NavBar />
         
         <Switch>
           
